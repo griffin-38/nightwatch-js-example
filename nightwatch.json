@@ -1,0 +1,62 @@
+{
+  "src_folders": ["test"],
+  "output_folder": "./reports",
+  "page_objects_path" : "./pages",  
+  "globals_path": "./data/globalModules.js",
+  "custom_assertions_path": ["./custom-assertions"],
+  "custom_commands_path": ["./custom-commands"],
+  "test_workers": {
+    "enabled": true,
+    "workers": "auto"
+  },
+  "webdriver": {
+    "start_process": false,
+    "host": "localhost",
+    "port": 4444
+  },
+  "test_settings": {
+    "default": {
+      "launch_url": "http://localhost",
+      "selenium_port": 4444,
+      "selenium_host": "localhost",
+      "desiredCapabilities": {
+        "browserName": "chrome",
+        "javascriptEnabled": true,
+        "acceptSslCerts": true,
+        "chromeOptions": {
+          "args" : ["--no-sandbox"],
+          "w3c": false
+        }
+      }
+    }
+  },
+  "screenshots": {
+    "enabled": true,
+    "path": "./screenshots"
+  },
+  "request_timeout_options": {
+    "timeout": 60000,
+    "retry_attempts": 5
+  },
+  "selenium_server": {
+    "selenium": {
+      "start_process": true,
+      "host": "localhost",
+      "port": 4444,
+      "server_path": "./bin/geckodriver",
+      "cli_args": {
+        "webdriver.gecko.driver": "./bin/geckodriver",
+        "webdriver.chrome.driver": "./bin/chromedriver"
+      }
+    },
+    "desiredCapabilities": {
+      "browserName": "chrome",
+      "javascriptEnabled": true,
+      "acceptSslCerts": true,
+      "chromeOptions": {
+        "args" : ["--no-sandbox"],
+        "w3c": false
+      }
+    }
+  }
+}
