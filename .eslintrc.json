@@ -1,0 +1,86 @@
+{
+
+  "extends": [
+    "eslint:recommended",
+    "plugin:require-path-exists/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": false
+    }
+  },
+  "env": {
+    "browser": false,
+    "mocha": true,
+    "node": true,
+    "es6": true,
+    "jest": true,
+    "cypress/globals": true
+  },
+  "plugins": [
+    "require-path-exists",
+    "cypress",
+    "chai-friendly",
+    "chai-expect",
+    "react",
+    "import"
+  ],
+  "rules": {
+    "no-unused-expressions": 0,
+    "chai-friendly/no-unused-expressions": 0,
+    "no-extra-boolean-cast": 0,
+    "curly": ["error", "all"],
+    "no-debugger": 1,
+    "semi": [1, "always"],
+    "no-console": 0,
+    "no-trailing-spaces": 0,
+    "no-else-return": 0,
+    "no-extra-bind": 0,
+    "no-implicit-coercion": 0,
+    "no-useless-call": 0,
+    "no-return-assign": 0,
+    "eol-last": 0,
+    "no-unused-vars": 0,
+    "no-extra-semi": 1,
+    "no-underscore-dangle": 0,
+    "no-lone-blocks": 0,
+    "one-var": 0,
+    "padding-line-between-statements": [
+      "warn",
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "return"
+      },
+      {
+        "blankLine": "any",
+        "prev": ["const"],
+        "next": "*"
+      }
+    ],
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ]
+  },
+  "globals": {
+    "Promise": true,
+    "Proxy": true,
+    "Reflect": true,
+    "__DEVELOPMENT__": true,
+    "__CLIENT__": true,
+    "__SERVER__": true,
+    "__DISABLE_SSR__": true,
+    "__DEVTOOLS__": true,
+    "window": true,
+    "socket": true,
+    "webpackIsomorphicTools": true,
+    "cy": true,
+    "Cypress": true
+  }
+}

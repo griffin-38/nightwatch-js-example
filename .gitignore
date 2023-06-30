@@ -1,0 +1,15 @@
+# dependencies
+node_modules
+
+# system files
+*.DS_Store
+*.swp
+/tags
+.env
+
+
+screenshots/
+/test/queue.json
+/test/cache
+/npm-debug.log
+.idea
